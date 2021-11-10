@@ -37,6 +37,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -74,6 +75,7 @@ def get_filters():
 
     print('-'*40)
     return city, month, day
+
 
 
 def load_data(city, month, day):
@@ -117,6 +119,7 @@ def load_data(city, month, day):
 
     # return df
     return df
+
 
 
 def time_stats(df):
@@ -168,6 +171,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % round((time.time() - start_time),1))
     print('-'*40)
  
+
     
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
@@ -186,6 +190,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % round((time.time() - start_time),1))
     print('-'*40)
     
+
     
 def user_stats(df,city):
     """Displays statistics on bikeshare users."""
@@ -219,6 +224,7 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % round((time.time() - start_time),1))
     print('-'*40)
 
+
     
 def display_raw_data(df):
     """
@@ -239,6 +245,7 @@ def display_raw_data(df):
           i+=5
       else:
           raw = (input("\nYour input is invalid. Please enter only 'yes' or 'no'\n")).lower()
+
 
             
 def main():
